@@ -127,15 +127,7 @@ cd backend
 pytest
 ```
 
-## What's mocked vs. real
 
-| Piece | This demo | Production version |
-|---|---|---|
-| AI responses | Real OpenAI API call | Same |
-| Product catalog | In-memory dict (`data.py`) | Client's product API / DB |
-| Order data | In-memory dict (`data.py`) | Client's order-management system |
-| Escalation to human | Logs to console | Creates a ticket in Zendesk/Intercom/etc. |
-| Auth | None | Session auth so the bot only shows a customer their own orders |
 
 ## Project structure
 
