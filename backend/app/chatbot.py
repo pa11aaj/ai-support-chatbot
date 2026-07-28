@@ -18,6 +18,7 @@ from .data import find_order, find_product
 from .models import Message
 
 MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
+MAX_REPLY_TOKENS = int(os.environ.get("MAX_REPLY_TOKENS", "300"))  # caps cost per response
 
 SYSTEM_PROMPT = """You are Aria, the customer support assistant for an online store.
 
@@ -140,6 +141,7 @@ def get_reply(conversation: List[Message]) -> tuple[str, list[str]]:
             model=MODEL,
             messages=messages,
             tools=TOOLS,
+            max_tokens=MAX_REPLY_TOKENS,
         )
         message = response.choices[0].message
 
