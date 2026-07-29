@@ -11,11 +11,11 @@ export default function App() {
       </p>
       <div className="demo-hint">
         Try asking: <br />
-        <code>"What's the price of the Aurora headphones?"</code>
+        <code>"What's the price of the Aurora Wireless Headphones?"</code>
         <br />
         <code>"Where's my order ord-1001?"</code>
         <br />
-        <code>"Do you have the Pulse water bottle in stock?"</code>
+        <code>"Do you have the Pulse Smart Water Bottle in stock?"</code>
       </div>
       <ChatWidget />
     </div>
